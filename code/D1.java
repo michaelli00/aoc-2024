@@ -24,11 +24,11 @@ public class D1 {
   }
 
   public void runP1() {
-    System.out.println("Total distance: " + calculateDistance());
+    System.out.println("Day 1 Part 1 total distance: " + calculateDistance());
   }
 
   public void runP2() {
-    System.out.println("Similarity score: " + calculateSimilarity());
+    System.out.println("Day 1 Part 2 imilarity score: " + calculateSimilarity());
   }
 
   private int calculateDistance() {
@@ -57,10 +57,10 @@ public class D1 {
   }
 
   private void readInput() {
-    try (BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE_PATH))) {
+		try (BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE_PATH))) {
       Pattern pattern = Pattern.compile(REGEX);
-      String line;
-      while ((line = br.readLine()) != null) {
+			String line;
+			while ((line = br.readLine()) != null) {
         Matcher matcher = pattern.matcher(line);
         if (matcher.find()) {
           this.leftIds.add(Integer.parseInt(matcher.group(1)));
@@ -68,9 +68,9 @@ public class D1 {
         } else {
           System.out.println("Malformatted line found: " + line + ". Ignoring it.");
         }
-      }
-    } catch (IOException e) {
-      System.out.println("Failed to read " + INPUT_FILE_PATH + " " + e);
-    }
+			}
+		} catch (IOException e) {
+			System.out.println("Failed to read " + INPUT_FILE_PATH + " " + e);
+		}
   }
 }
