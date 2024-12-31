@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.regex.Pattern;
 import java.util.stream.IntStream;
 
-public class D2 {
+public class D2 implements Day {
   private static final String INPUT_FILE_PATH = "./inputs/day2.txt";
   private static final String REGEX = "\\s+";
 
@@ -70,7 +70,7 @@ public class D2 {
     return 1;
   }
 
-	private int[] generateLevelsExcludingIndex(int[] levels, int index) {
-		return IntStream.range(0, levels.length).filter(i -> i != index).map(i -> levels[i]).toArray();
-	}
+  private int[] generateLevelsExcludingIndex(int[] levels, int index) {
+    return IntStream.range(0, levels.length).filter(i -> i != index).map(i -> levels[i]).toArray();
+  }
 }

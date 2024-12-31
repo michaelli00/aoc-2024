@@ -1,13 +1,18 @@
 package code;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
   public static void main(String[] args) {
-    D1 d1 = new D1();
-    d1.runP1();
-    d1.runP2();
+    List<Day> days = new ArrayList<>();
+    days.add(new D1());
+    days.add(new D2());
+    days.add(new D3());
 
-    D2 d2 = new D2();
-    d2.runP1();
-    d2.runP2();
+    for (Day day : days) {
+      day.runP1();
+      day.runP2();
+    }
   }
 }

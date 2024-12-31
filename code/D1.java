@@ -10,7 +10,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class D1 {
+public class D1 implements Day {
   private static final String INPUT_FILE_PATH = "./inputs/day1.txt";
   private static final String REGEX = "(\\d+)\\s*(\\d+)";
 
@@ -57,10 +57,10 @@ public class D1 {
   }
 
   private void readInput() {
-		try (BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE_PATH))) {
+    try (BufferedReader br = new BufferedReader(new FileReader(INPUT_FILE_PATH))) {
       Pattern pattern = Pattern.compile(REGEX);
-			String line;
-			while ((line = br.readLine()) != null) {
+      String line;
+      while ((line = br.readLine()) != null) {
         Matcher matcher = pattern.matcher(line);
         if (matcher.find()) {
           this.leftIds.add(Integer.parseInt(matcher.group(1)));
@@ -68,9 +68,9 @@ public class D1 {
         } else {
           System.out.println("Malformatted line found: " + line + ". Ignoring it.");
         }
-			}
-		} catch (IOException e) {
-			System.out.println("Failed to read " + INPUT_FILE_PATH + " " + e);
-		}
+      }
+    } catch (IOException e) {
+      System.out.println("Failed to read " + INPUT_FILE_PATH + " " + e);
+    }
   }
 }
