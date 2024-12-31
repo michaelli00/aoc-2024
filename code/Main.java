@@ -9,6 +9,7 @@ public class Main {
     days.add(new D1());
     days.add(new D2());
     days.add(new D3());
+    days.add(new D4());
 
     for (Day day : days) {
       day.runP1();

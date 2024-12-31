@@ -28,7 +28,7 @@ public class D1 implements Day {
   }
 
   public void runP2() {
-    System.out.println("Day 1 Part 2 imilarity score: " + calculateSimilarity());
+    System.out.println("Day 1 Part 2 Similarity score: " + calculateSimilarity());
   }
 
   private int calculateDistance() {
