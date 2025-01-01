@@ -124,37 +124,4 @@ public class D4 implements Day {
     }
     return attemptToMatchTargetString(newCoordinate, direction, newTargetStringIndex, targetString);
   }
-
-  private class Coordinate {
-    private int xCoord;
-    private int yCoord;
-
-    public Coordinate(int x, int y) {
-      this.xCoord = x;
-      this.yCoord = y;
-    }
-
-    public int getXCoord() {
-      return xCoord;
-    }
-
-    public int getYCoord() {
-      return yCoord;
-    }
-
-    public String toString() {
-      return "x: " + xCoord + " y: " + yCoord;
-    }
-  }
-
-  private enum Direction {
-    NORTH,
-    EAST,
-    SOUTH,
-    WEST,
-    NORTH_EAST,
-    NORTH_WEST,
-    SOUTH_EAST,
-    SOUTH_WEST
-  }
 }
