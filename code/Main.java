@@ -11,7 +11,8 @@ public class Main {
     days.add(new D3());
     days.add(new D4());
     days.add(new D5());
-    days.add(new D6());
+    // days.add(new D6());
+    // days.add(new D7());
 
     for (Day day : days) {
       day.runP1();
